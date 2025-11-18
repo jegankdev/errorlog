@@ -1,0 +1,4 @@
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[    27.797] (EE) Failed to load module "intel" (module does not exist, 0)
+[    27.799] (EE) Failed to load module "fbdev" (module does not exist, 0)
+[    27.800] (EE) Failed to load module "vesa" (module does not exist, 0)
