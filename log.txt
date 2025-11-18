@@ -1,0 +1,36 @@
+[    0.032508] Reserving Intel graphics memory at [mem 0xde000000-0xdfffffff]
+[    0.280438] smpboot: CPU0: Intel(R) Core(TM) i5 CPU       M 560  @ 2.67GHz (family: 0x6, model: 0x25, stepping: 0x5)
+[    0.280788] Performance Events: PEBS fmt1+, Westmere events, 16-deep LBR, Intel PMU driver.
+[    0.349962] acpi PNP0A08:00: _OSC: platform retains control of PCIe features (AE_ERROR)
+[    0.435422] pci 0000:00:02.0: BIOS left Intel GPU interrupts enabled; disabling
+[    0.573292] ACPI: bus type drm_connector registered
+[    0.596024] intel_pstate: CPU model not supported
+[    0.596703] simple-framebuffer simple-framebuffer.0: [drm] Registered 1 planes with drm panic
+[    0.596708] [drm] Initialized simpledrm 1.0.0 for simple-framebuffer.0 on minor 0
+[    0.598554] simple-framebuffer simple-framebuffer.0: [drm] fb0: simpledrmdrmfb frame buffer device
+[    0.721201] RAS: Correctable Errors collector initialized.
+[    2.780608] i915 0000:00:02.0: [drm] Found ironlake (device ID 0046) integrated display version 5.00 stepping N/A
+[    2.780992] pci 0000:00:00.0: Intel HD Graphics Chipset
+[    2.853203] i915 0000:00:02.0: [drm] Skipping intel_backlight registration
+[    2.853788] i915 0000:00:02.0: [drm] Registered 2 planes with drm panic
+[    2.853791] [drm] Initialized i915 1.6.0 for 0000:00:02.0 on minor 1
+[    2.902018] fbcon: i915drmfb (fb0) is primary device
+[    2.902027] i915 0000:00:02.0: [drm] fb0: i915drmfb frame buffer device
+[   21.721282] systemd[1]: Load Kernel Module drm was skipped because of an unmet condition check (ConditionKernelModuleLoaded=!drm).
+[   22.937243] intel ips 0000:00:1f.6: CPU TDP doesn't match expected value (found 25, expected 29)
+[   22.943477] intel ips 0000:00:1f.6: IPS driver initialized, MCP temp limit 90
+[   22.978695] iwlwifi 0000:02:00.0: Detected Intel(R) Centrino(R) Advanced-N 6200 AGN
+[   22.978839] iwlwifi 0000:02:00.0: Direct firmware load for iwlwifi-6000-6.ucode failed with error -2
+[   22.979052] iwlwifi 0000:02:00.0: Direct firmware load for iwlwifi-6000-5.ucode failed with error -2
+[   22.981063] e1000e: Intel(R) PRO/1000 Network Driver
+[   22.981070] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[   23.605924] e1000e 0000:00:19.0 eth0: Intel(R) PRO/1000 Network Connection
+[   23.611993] iwlwifi 0000:02:00.0: Detected Intel(R) Centrino(R) Advanced-N 6200 AGN, REV=0x74
+[   24.034355] kvm_intel: VM_EXIT_LOAD_IA32_PERF_GLOBAL_CTRL does not work properly. Using workaround
+[   24.041565] snd_hda_intel 0000:00:1b.0: bound 0000:00:02.0 (ops intel_audio_component_bind_ops [i915])
+[   24.143596] input: HDA Intel MID Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input10
+[   24.143690] input: HDA Intel MID Dock Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input11
+[   24.143768] input: HDA Intel MID Dock Line Out as /devices/pci0000:00/0000:00:1b.0/sound/card0/input12
+[   24.143868] input: HDA Intel MID Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card0/input13
+[   24.144396] input: HDA Intel MID HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input14
+[   24.144492] input: HDA Intel MID HDMI/DP,pcm=7 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input15
