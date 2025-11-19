@@ -1,0 +1,129 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+Calm down, it was a misinput! MISINPUT!
+
+Hyprland received signal 6(ABRT)
+Version: 71a1216abcc7031776630a6d88f105605c4dc1c9
+Tag: v0.51.1
+Date: Mon Sep 22 20:54:03 2025
+Flags:
+
+System info:
+	System name: Linux
+	Node name: arch
+	Release: 6.17.5-arch1-1
+	Version: #1 SMP PREEMPT_DYNAMIC Thu, 23 Oct 2025 18:49:03 +0000
+
+GPU:
+	00:02.0 VGA compatible controller [0300]: Intel Corporation Core Processor Integrated Graphics Controller [8086:0046] (rev 02) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Arch Linux"
+	PRETTY_NAME="Arch Linux"
+	ID=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="38;2;23;147;209"
+	HOME_URL="https://archlinux.org/"
+	DOCUMENTATION_URL="https://wiki.archlinux.org/"
+	SUPPORT_URL="https://bbs.archlinux.org/"
+	BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"
+	PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+	LOGO=archlinux-logo
+Backtrace:
+	# | hyprland(_Z12getBacktracev+0x61) [0x564cec1a1451]
+		getBacktrace()
+		??:?
+	#1 | hyprland(_ZN14NCrashReporter18createAndSaveCrashEi+0xc77) [0x564cec101067]
+		NCrashReporter::createAndSaveCrash(int)
+		??:?
+	#2 | hyprland(+0x23a421) [0x564cec07a421]
+		CCompositor::removeLockFile()
+		??:?
+	#3 | /usr/lib/libc.so.6(+0x3e540) [0x7f47f283e540]
+		??
+		??:0
+	#4 | /usr/lib/libc.so.6(+0x9894c) [0x7f47f289894c]
+		??
+		??:0
+	#5 | /usr/lib/libc.so.6(gsignal+0x20) [0x7f47f283e410]
+		??
+		??:0
+	#6 | hyprland(_ZN15CHyprOpenGLImpl7initEGLEb+0xb42) [0x564cec463d12]
+		CHyprOpenGLImpl::initEGL(bool)
+		??:?
+	#7 | hyprland(_ZN15CHyprOpenGLImplC1Ev+0xd58) [0x564cec46f228]
+		CHyprOpenGLImpl::CHyprOpenGLImpl()
+		??:?
+	#8 | hyprland(_ZN11CCompositor12initManagersE18eManagersInitStage+0xf4b) [0x564cec07df6b]
+		CCompositor::initManagers(eManagersInitStage)
+		??:?
+	#9 | hyprland(_ZN11CCompositor10initServerENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi+0xe24) [0x564cec07fc14]
+		CCompositor::initServer(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int)
+		??:?
+	#1 | hyprland(main+0xdc3) [0x564cec0160f3]
+		main
+		??:?
+	#11 | /usr/lib/libc.so.6(+0x27675) [0x7f47f2827675]
+		??
+		??:0
+	#12 | /usr/lib/libc.so.6(__libc_start_main+0x89) [0x7f47f2827729]
+		??
+		??:0
+	#13 | hyprland(_start+0x25) [0x564cec075ce5]
+		_start
+		??:?
+
+
+Log tail:
+[LOG] [AQ] drm: Connectors size2 6
+[LOG] [AQ] Created a GBM allocator with drm fd 35
+[LOG] [AQ] Supported EGL client extensions: (16) EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_EXT_platform_device EGL_EXT_explicit_device EGL_EXT_platform_wayland EGL_KHR_platform_wayland EGL_EXT_platform_x11 EGL_KHR_platform_x11 EGL_EXT_platform_xcb EGL_MESA_platform_gbm EGL_KHR_platform_gbm EGL_MESA_platform_surfaceless
+[LOG] [AQ] CDRMRenderer(drm): Using device /dev/dri/card1
+[LOG] [AQ] CDRMRenderer: IMG_context_priority supported, requesting high
+[LOG] [AQ] CDRMRenderer: EXT_create_context_robustness supported, requesting lose on reset
+[ERR] [AQ] [EGL] Command eglCreateContext errored out with EGL_BAD_MATCH (0x12297): dri2_create_context
+[ERR] [AQ] CDRMRenderer: eglCreateContext failed with GLES 3.2, retrying GLES 3.0
+[ERR] [AQ] [EGL] Command eglCreateContext errored out with EGL_BAD_MATCH (0x12297): dri2_create_context
+[ERR] [AQ] CDRMRenderer: Can't create renderer, eglCreateContext failed with both GLES 3.2 and GLES 3.0
+[ERR] [AQ] drm: onReady: no renderer for gl formats
+[LOG] [AQ] drm: onReady: connector 70
+[LOG] [AQ] drm: onReady: connector 70 has output name eDP-1
+[LOG] [AQ] Swapchain: Clearing
+[LOG] New aquamarine output with name eDP-1
+[LOG] [AQ] drm: onReady: connector 67
+[LOG] [AQ] drm: onReady: connector 77
+[LOG] [AQ] drm: onReady: connector 84
+[LOG] [AQ] drm: onReady: connector 89
+[LOG] [AQ] drm: onReady: connector 93
+[LOG] [AQ] Supported EGL client extensions: (16) EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_EXT_platform_device EGL_EXT_explicit_device EGL_EXT_platform_wayland EGL_KHR_platform_wayland EGL_EXT_platform_x11 EGL_KHR_platform_x11 EGL_EXT_platform_xcb EGL_MESA_platform_gbm EGL_KHR_platform_gbm EGL_MESA_platform_surfaceless
+[LOG] [AQ] CDRMRenderer(drm): Using device /dev/dri/card1
+[LOG] [AQ] CDRMRenderer: IMG_context_priority supported, requesting high
+[LOG] [AQ] CDRMRenderer: EXT_create_context_robustness supported, requesting lose on reset
+[ERR] [AQ] [EGL] Command eglCreateContext errored out with EGL_BAD_MATCH (0x12297): dri2_create_context
+[ERR] [AQ] CDRMRenderer: eglCreateContext failed with GLES 3.2, retrying GLES 3.0
+[ERR] [AQ] [EGL] Command eglCreateContext errored out with EGL_BAD_MATCH (0x12297): dri2_create_context
+[ERR] [AQ] CDRMRenderer: Can't create renderer, eglCreateContext failed with both GLES 3.2 and GLES 3.0
+[ERR] [AQ] drm: initMgpu: no renderer
+[ERR] [AQ] drm: Failed initializing mgpu
+[LOG] Running on DRMFD: 29
+[LOG] Using RENDERNODEFD: 19
+[LOG] DRM DisplayNode syncobj timeline support: yes
+[LOG] DRM RenderNode syncobj timeline support: yes
+[LOG] wl_display_add_socket for wayland-1 succeeded with 0
+[LOG] Creating the CHyprOpenGLImpl!
+[LOG] Supported EGL global extensions: (16) EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_EXT_platform_device EGL_EXT_explicit_device EGL_EXT_platform_wayland EGL_KHR_platform_wayland EGL_EXT_platform_x11 EGL_KHR_platform_x11 EGL_EXT_platform_xcb EGL_MESA_platform_gbm EGL_KHR_platform_gbm EGL_MESA_platform_surfaceless
+[LOG] eglDeviceFromDRMFD: Using device /dev/dri/card1
+[LOG] EGL: IMG_context_priority supported, requesting high
+[LOG] EGL: EXT_create_context_robustness supported, requesting lose on reset
+[ERR] [EGL] Command eglCreateContext errored out with EGL_BAD_MATCH (0x12297): dri2_create_context
+[WARN] EGL: Failed to create a context with GLES3.2, retrying 3.0
+[ERR] [EGL] Command eglCreateContext errored out with EGL_BAD_MATCH (0x12297): dri2_create_context
+[CRITICAL] 
+==========================================================================================
+ASSERTION FAILED! 
+
+EGL: failed to create a context with either GLES3.2 or 3.0
+
+at: line 188 in OpenGL.cpp
